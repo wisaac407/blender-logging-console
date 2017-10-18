@@ -212,7 +212,7 @@ class LoggingCmd(Cmd):
     def do_list_all(self, arg):
         """List all loggers"""
         indent = self.indent
-        self.stdout.writeline(indent + ('\n' + indent).join(self.get_loggers_flat()))
+        self.stdout.writeline(indent + ('\n' + indent).join(sorted(self.get_loggers_flat())))
 
     do_la = do_list_all
 
